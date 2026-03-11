@@ -1,0 +1,1162 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ICCMESH 2026 | International Conference on Computational Mathematics</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .speaker-card:hover .speaker-icon {
+            transform: scale(1.1);
+            background-color: #ec5b13;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-4xl">functions</span>
+                    <div class="flex flex-col">
+                        <span
+                            class="text-xl font-bold tracking-tight text-slate-900 dark:text-white leading-none">ICCMESH
+                            <span class="text-primary">2026</span></span>
+                        <span
+                            class="text-[10px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 mt-1 font-bold">IEEE
+                            Conference</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden xl:flex items-center gap-6">
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="#">Home</a>
+
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-bold hover:text-primary transition-colors py-8">
+                            About <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block w-72 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl shadow-xl py-2 z-[100]">
+                            <a href="#about"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">About
+                                Us</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors border-t border-slate-50 dark:border-slate-700/50">About
+                                the Conference</a>
+                            <a href="#dept-ee"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">About
+                                Dept. of Electrical Engineering</a>
+                        </div>
+                    </div>
+
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="#">Committee</a>
+
+                    <!-- Authors Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-bold hover:text-primary transition-colors py-8">
+                            Authors <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block w-72 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl shadow-xl py-2 z-[100]">
+                            <a href="#tracks"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">Call
+                                for Papers</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors border-t border-slate-50 dark:border-slate-700/50">Camera
+                                Ready Paper Submission</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">Publication
+                                and Templates</a>
+                        </div>
+                    </div>
+
+                    <!-- Speakers Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-bold hover:text-primary transition-colors py-8">
+                            Speakers <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block w-72 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl shadow-xl py-2 z-[100]">
+                            <a href="#speakers"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">Keynote
+                                Speakers</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors border-t border-slate-50 dark:border-slate-700/50">WIE
+                                Speakers</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">Panelists</a>
+                        </div>
+                    </div>
+
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="#">Schedule</a>
+
+                    <!-- Awards Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-bold hover:text-primary transition-colors py-8">
+                            Awards <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block w-72 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl shadow-xl py-2 z-[100]">
+                            <a href="#"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">Best
+                                Paper Award</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors border-t border-slate-50 dark:border-slate-700/50">Best
+                                Poster Award</a>
+                        </div>
+                    </div>
+
+                    <!-- Travel Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-bold hover:text-primary transition-colors py-8">
+                            Travel <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block w-72 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl shadow-xl py-2 z-[100]">
+                            <a href="#"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">Accommodation</a>
+                            <a href="#venue"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors border-t border-slate-50 dark:border-slate-700/50">Places
+                                of Interest</a>
+                        </div>
+                    </div>
+
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="#">Sponsorship</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="#">Contact Us</a>
+
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 ml-2">
+                        Registration
+                    </button>
+                </nav>
+
+                <div class="xl:hidden">
+                    <button id="mobile-menu-button" class="p-2 text-slate-600 dark:text-slate-300">
+                        <span class="material-symbols-outlined scale-125">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-background-dark/95 via-background-dark/80 to-background-dark/40 z-10">
+            </div>
+            <video autoplay="" class="w-full h-full object-cover" loop="" muted="" playsinline="">
+                <source
+                    src="https://odicon.co.in/wp-content/uploads/2025/08/SOA-University-Campus-Tour-2025-SOA-Siksha-O-Anusandhan-720p-h264-youtube.mp4"
+                    type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="relative z-20 max-w-5xl mx-auto px-4 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-6">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                Annual Conference 2026
+            </div>
+            <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
+                International Conference on <span class="text-primary">Computational Mathematics</span>
+            </h1>
+            <p class="text-slate-200 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+                Hosted by Siksha 'O' Anusandhan (SOA) Deemed to be University.
+                Bridging the gap between mathematical models and real-world Engineering &amp; Healthcare solutions.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform">
+                    Register Now
+                </button>
+                <button
+                    class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">
+                    View Full Scope
+                </button>
+            </div>
+            <div class="mt-12 flex items-center justify-center gap-6 text-slate-300">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">calendar_today</span>
+                    <span class="text-sm font-medium">December 12-14, 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">location_on</span>
+                    <span class="text-sm font-medium">Bhubaneswar, India</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Important Dates (Requested Add-on) -->
+    <section class="py-16 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-2xl bg-background-light dark:bg-slate-800">
+                    <p class="text-primary font-bold text-sm mb-2">Paper Submission</p>
+                    <p class="text-xl font-black text-slate-900 dark:text-white">Oct 15, 2026</p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-background-light dark:bg-slate-800">
+                    <p class="text-primary font-bold text-sm mb-2">Acceptance Notification</p>
+                    <p class="text-xl font-black text-slate-900 dark:text-white">Nov 10, 2026</p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-background-light dark:bg-slate-800">
+                    <p class="text-primary font-bold text-sm mb-2">Registration Deadline</p>
+                    <p class="text-xl font-black text-slate-900 dark:text-white">Nov 30, 2026</p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-background-light dark:bg-slate-800">
+                    <p class="text-primary font-bold text-sm mb-2">Conference Dates</p>
+                    <p class="text-xl font-black text-slate-900 dark:text-white">Dec 12-14, 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Dept. of Electrical Engineering -->
+    <section class="py-24 bg-white dark:bg-slate-900/50" id="dept-ee">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-3">Academic Excellence
+                        </h2>
+                        <h3 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight">
+                            Department of Electrical Engineering
+                        </h3>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed space-y-4">
+                        <p>
+                            The Department of EE started in the year 1996. Since its commencement, the primary objective
+                            of the department has been to impart quality education, training, and innovative research at
+                            the undergraduate, postgraduate and doctoral levels in various areas of Electrical
+                            Engineering with a broad emphasis on design aspects of electrical systems.
+                        </p>
+                        <p>
+                            This program aims at producing Technocrats with sound knowledge and skill in electrical
+                            engineering. This department has 10 well equipped undergraduate level laboratories and 04
+                            research laboratories, where students work on projects which is beyond the syllabus.
+                        </p>
+                        <p>
+                            The major areas of faculty expertise of the department include Electrical Power & Control,
+                            Control Systems, Power Electronics, Power System Engineering, Electric Vehicles, Power
+                            Electronics and Drives, Smart & Micro Grid, Soft Computing, etc. The majority of the
+                            Faculties of this Department are Ph.D. and around 100 research papers are published
+                            annually, in various reputed Journals. The department of EE is accredited by NBA &
+                            Re-Accredited by NAAC with A++ in the year 2022.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl">
+                        <img alt="Department of EE" class="w-full h-full object-cover"
+                            src="https://odicon.co.in/wp-content/uploads/2025/08/ITER-Wide.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Keynote Speakers -->
+    <section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden" id="speakers">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-3">Distinguished Experts</h2>
+                <h3 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Keynote Speakers <span
+                        class="text-primary">(Expected)</span></h3>
+                <div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Speaker Template Loop -->
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Sanjeewa
+                        Perera</h4>
+                    <p class="text-primary text-sm font-semibold mb-4">University of Colombo, Srilanka</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Poom Kumam
+                    </h4>
+                    <p class="text-primary text-sm font-semibold mb-4">KMUTT, Thailand</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Cheong Kang
+                        Hao</h4>
+                    <p class="text-primary text-sm font-semibold mb-4">NTU, Singapore</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. M. Tanveer
+                    </h4>
+                    <p class="text-primary text-sm font-semibold mb-4">IIT Indore</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. A.K.B. Chand
+                    </h4>
+                    <p class="text-primary text-sm font-semibold mb-4">IIT Madras</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. K.S. Nisar
+                    </h4>
+                    <p class="text-primary text-sm font-semibold mb-4">Prince Sattam bin Abdulaziz University</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Dumitru
+                        Baleanu</h4>
+                    <p class="text-primary text-sm font-semibold mb-4">Cankaya University, Turkey</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Piera
+                        Centobelli</h4>
+                    <p class="text-primary text-sm font-semibold mb-4">University of Naples Federico II, Italy</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Nitu Kumari
+                    </h4>
+                    <p class="text-primary text-sm font-semibold mb-4">IIT Mandi</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Prashant Kumar
+                        Srivastava</h4>
+                    <p class="text-primary text-sm font-semibold mb-4">IIT Patna</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Millee Pant
+                    </h4>
+                    <p class="text-primary text-sm font-semibold mb-4">IIT Roorkee</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Dr. Ravindra Ku Jha
+                    </h4>
+                    <p class="text-primary text-sm font-semibold mb-4">IIT Guwahati</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Jitendra
+                        Kaushik</h4>
+                    <p class="text-primary text-sm font-semibold mb-4">Symbiosis Pune</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Harish Garg
+                    </h4>
+                    <p class="text-primary text-sm font-semibold mb-4">Thapar University</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. S.C. Martha
+                    </h4>
+                    <p class="text-primary text-sm font-semibold mb-4">IIT Ropar</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Ranjit Kumar
+                        Upadhyay</h4>
+                    <p class="text-primary text-sm font-semibold mb-4">ISM Dhanbad</p>
+                </div>
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="speaker-icon w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300">
+                        <span class="material-symbols-outlined text-4xl">person_pin</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">Prof. Bappan Ghosh
+                    </h4>
+                    <p class="text-primary text-sm font-semibold mb-4">IIT Indore</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Advisory Boards -->
+    <section class="py-24 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- International Advisory Board -->
+                <div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                            <span class="material-symbols-outlined">language</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                            International Advisory Board</h3>
+                    </div>
+                    <div
+                        class="bg-background-light dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Roberto Cerchino, Italy</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Pierra Centobelli, Italy</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Artion Kasuri</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Savin Treanta</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Fahd Jarad</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Dumitru Baleanu</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Zareen Khan</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Choonkil Park</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Aydi Hassen</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. K.S. Nisar</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Ebenezer Bonyah, Ghana</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- National Advisory Board -->
+                <div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                            <span class="material-symbols-outlined">flag</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight">National
+                            Advisory Board</h3>
+                    </div>
+                    <div
+                        class="bg-background-light dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof Satyananda Panda, NIT Calicut
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Amiya Kumar Nayak, IIT Roorkee
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Swaroop Nandan Bora, IIT
+                                            Guwahati</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Arvind Kumar Sinha, NIT Raipur
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Mrudul Jani, Parul University
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. A.K. Mallick, UP Rajarshi
+                                            Tandon Open University</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Snehashis Chakraborty, NIT
+                                            Rourkela</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Prathibamoy Das, IIT Patna
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Ram Prasad Padhy, IIT
+                                            Bhubaneswar</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Samarjit Kar, NIT Durgapur
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. M. Tanveer, IIT Indore</td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-semibold">Prof. Ravi Gor, Gujarat University
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About ICCMESH -->
+    <section class="py-24 bg-background-light dark:bg-background-dark relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-8 text-center">About ICCMESH
+            </h2>
+            <div class="h-1.5 w-24 bg-primary mx-auto rounded-full mb-12"></div>
+
+            <div class="space-y-8 text-slate-600 dark:text-slate-300 text-lg leading-relaxed text-justify">
+                <p>
+                    Computational Mathematics has recently been recognized as an important tool for understanding,
+                    Modelling, and managing complex systems in engineering sciences and healthcare. By combining
+                    numerical analysis, optimization, uncertainty quantification, and data-driven computational methods,
+                    mathematical models are increasingly used for both technological innovation and evidence-based
+                    decision-making. In engineering, these tools are used for the analysis and optimization of
+                    structures, energy systems, and industrial processes, and in healthcare for disease Modelling,
+                    medical imaging, treatment planning, and management of healthcare systems.
+                </p>
+                <p>
+                    The proposed conference is intended to offer an interdisciplinary forum for researchers,
+                    practitioners, and policymakers to review recent developments in computational mathematical methods
+                    and their applications to engineering and healthcare problems. Special focus will be placed on
+                    contemporary computational methods including numerical and fractional differential equations, fuzzy
+                    and stochastic Modelling, optimization and decision sciences, and the coupling of machine learning
+                    with mathematical paradigms. Case studies focusing on real-world applications and policy-driven
+                    outcomes are also invited.
+                </p>
+                <p>
+                    Through this conference, it is hoped that the gap between mathematical theory, computational
+                    practice, and decision-making will be closed. The anticipated outcomes of this conference include
+                    methodological advancements, enhanced interdisciplinary interactions, and the development of new
+                    insights for sustainable engineering and effective healthcare.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Call for Papers / Tracks -->
+    <section class="py-24 bg-white dark:bg-slate-900" id="tracks">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="max-w-3xl">
+                    <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-3">Scientific Program</h2>
+                    <h3 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Call for Papers</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        Students, Faculties, Research Scholars, Scientists, and Industrial Experts are welcome to submit
+                        their <span class="text-primary font-bold">one-page abstract</span> on any of the following
+                        topics:
+                    </p>
+                </div>
+                <button
+                    class="bg-slate-900 dark:bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-all shadow-xl shadow-primary/20">
+                    Submission Guidelines <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Track 1 -->
+                <div
+                    class="group p-10 rounded-3xl bg-background-light dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all shadow-sm hover:shadow-2xl">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span
+                            class="inline-block p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-4xl">calculate</span>
+                        </span>
+                        <h4 class="text-2xl font-black dark:text-white leading-tight">1. Computational Methods &
+                            Mathematical Modelling</h4>
+                    </div>
+                    <ul class="text-slate-600 dark:text-slate-400 space-y-4">
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Numerical methods for differential equations (ODEs, PDEs, fractional, and stochastic
+                                equations)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Multiscale and multiphysics modelling</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Optimization and optimal control</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Scientific computing and high-performance computing</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Track 2 -->
+                <div
+                    class="group p-10 rounded-3xl bg-background-light dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all shadow-sm hover:shadow-2xl">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span
+                            class="inline-block p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-4xl">settings_input_component</span>
+                        </span>
+                        <h4 class="text-2xl font-black dark:text-white leading-tight">2. Engineering Applications</h4>
+                    </div>
+                    <ul class="text-slate-600 dark:text-slate-400 space-y-4">
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Computational mechanics and fluid dynamics</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Smart materials and structural health monitoring</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Energy systems, sustainability, and environmental modelling</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Control systems and industrial optimization</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Track 3 -->
+                <div
+                    class="group p-10 rounded-3xl bg-background-light dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all shadow-sm hover:shadow-2xl">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span
+                            class="inline-block p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-4xl">biotech</span>
+                        </span>
+                        <h4 class="text-2xl font-black dark:text-white leading-tight">3. Healthcare & Biomedical
+                            Applications</h4>
+                    </div>
+                    <ul class="text-slate-600 dark:text-slate-400 space-y-4">
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Mathematical modelling of disease dynamics and tumor growth</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Medical image processing and computational diagnostics</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Drug delivery and treatment optimization</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Epidemiological and public health modelling</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Track 4 -->
+                <div
+                    class="group p-10 rounded-3xl bg-background-light dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all shadow-sm hover:shadow-2xl">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span
+                            class="inline-block p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-4xl">psychology</span>
+                        </span>
+                        <h4 class="text-2xl font-black dark:text-white leading-tight">4. Uncertainty, Data &
+                            Intelligence</h4>
+                    </div>
+                    <ul class="text-slate-600 dark:text-slate-400 space-y-4">
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Uncertainty quantification and sensitivity analysis</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Fuzzy, stochastic, and hybrid modelling approaches</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Machine learning and AI integrated with mathematical models</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="text-primary mt-1">â€¢</span>
+                            <span>Data-driven and inverse problem methodologies</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Bhubaneswar -->
+    <section class="py-24 bg-background-dark text-white overflow-hidden relative" id="venue">
+        <div class="absolute inset-0 opacity-20">
+            <img alt="Bhubaneswar Architecture" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNEd_jT95M8YsSH3ORU8_gv0yVuvPLS54t0PpPCnZG2sUSkyVy6a4bHMpQUQ3Xyemb3k4w30JjK3afOE3xrlcrLS74QSCRqC0VW_fXxeHdbjTuxW4c7F2WwyyhQSwT8Vl2BkJSRsx64kfFx3db8H1mqNL4eMoWlYnhKOyJ9GQ_UrKNgGPWLIhiPJC1FVfe_sn-7LR_sbsgdLzHx9_LZwwPUOC3vS9R_qgvud8DcuEgN_lQQ4-4LelZOnfJIliYWpf1yIkJCi0jaO0" />
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img alt="Temple City Architecture"
+                            class="rounded-2xl w-full h-64 object-cover border border-white/10"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6yikLDaGVjFZG5S6n6KmWaieBq0JoRkefocGAOh6q6GHUyxq6ch5vhLRdGZ7fGtpMIdruejwC_1peISyOJallVQH8xWTGSOq4MjRYZQHOg5VhwcR3zFvkQoPzpjS2zVpIf8aHJ7cs6xJtPzuUhWl-k3mspzkRcnob7UJoPlXnqGophVl8IDXBYB6cNtwAxPPh7PV-vks0UOsEHfivJmpEKnyI9TYqzTRsUS5hPYfBUHeLGQar_QgW_m-9FQPl9EVo-qyxEA_nB3Y" />
+                        <img alt="City of Temples"
+                            class="rounded-2xl w-full h-64 object-cover mt-8 border border-white/10"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLaypRA5Q60nMKT2eVcFWJQzP_a0EM0Pp_ePRhVpglu4PKXGwjsIan7QSx5RwmWfccp1dAiMVa27maUfAihmH87mUCT56y_n0w9-XGCEqzMfJTiy7EzkcR8j684klXJHQoahtiIMdBnE1wQfSP4v-KJutP5i4g57YIODV7WeY7y8iNtDkETosYo-WRUeDojU4pmWmJH_9JSxJLZfvFHTJ5a1VE4pM-4nR1dL0nHv8rh9t5n5eyAEEMM-_zFGdFgHQJO8Bse30fhVk" />
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-8">
+                    <div>
+                        <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-3">The Venue</h2>
+                        <h3 class="text-4xl font-black leading-tight text-white">Bhubaneswar: The Temple City of India
+                        </h3>
+                    </div>
+                    <div class="text-slate-300 text-lg leading-relaxed space-y-6">
+                        <p>
+                            Bhubaneswar, also known as the "Temple City of India," has over 700 temples, many of which
+                            are old in origin. These temples, which incorporate Kalinga architecture, highlight the
+                            city's spiritual past. The city's history stretches back to the third century BC, as
+                            indicated by the nearby Dhauli Hill, which contains Emperor Ashoka's rock edicts. It is
+                            thought to be the site of the Kalinga war.
+                        </p>
+                        <p>
+                            The Lingaraja Temple is one of Bhubaneswar's most prominent monuments, drawing both devotees
+                            and tourists. Other prominent temples are the Rajarani Temple, Mukteswara Temple, and Ananta
+                            Vasudeva Temple.
+                        </p>
+                        <p>
+                            The city is an important element of Odisha's "Golden Triangle," which also includes Puri and
+                            Konark, which are known for their religious and cultural significance. Bhubaneswar is
+                            well-connected via air, train, and road. Biju Patnaik International Airport acts as a
+                            gateway for both domestic and international travellers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places of Interest -->
+    <section class="py-24 bg-white dark:bg-slate-900/50" id="places-of-interest">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-3">Explore Odisha</h2>
+                <h3 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Places of Interest</h3>
+                <div class="h-1.5 w-24 bg-primary mx-auto rounded-full mb-8"></div>
+                <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                    Bhubaneswar, Konark and Puri make the perfect **Golden Triangle** in Odisha. This trio offers the
+                    best tour plan to explore the real charm of Odisha tourism, featuring rich cultural heritage, temple
+                    architecture, and natural wonders.
+                </p>
+            </div>
+
+            <!-- Grid of Places -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Lingaraj Temple -->
+                <div
+                    class="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-700">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621259182370-dcc07963ec7a?auto=format&fit=crop&q=80&w=800"
+                            alt="Lingaraj Temple"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 left-4"><span
+                                class="px-3 py-1 rounded-full bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">Temple
+                                City Icon</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Lingaraj Temple</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Dedicated to Lord
+                            Shiva, it represents the quintessence of Kalinga architecture, culminating the medieval
+                            stages of à¦®à¦¨à§à¦¦à¦¿à¦° (Temple) design in Bhubaneswar.</p>
+                        <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase"><span
+                                class="material-symbols-outlined text-sm">verified</span>Spiritual Hub</div>
+                    </div>
+                </div>
+
+                <!-- Konark Sun Temple -->
+                <div
+                    class="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-700">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&q=80&w=800"
+                            alt="Konark Sun Temple"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 left-4"><span
+                                class="px-3 py-1 rounded-full bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">UNESCO
+                                Heritage</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Konark Sun Temple</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">A world-famous Hindu
+                            temple dedicated to the Sun God, Surya. It is known for its exquisite stone carvings and
+                            chariot architecture.</p>
+                        <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase"><span
+                                class="material-symbols-outlined text-sm">workspace_premium</span>Global Marvel</div>
+                    </div>
+                </div>
+
+                <!-- Jagannath Temple, Puri -->
+                <div
+                    class="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-700">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621259181236-052445e905c1?auto=format&fit=crop&q=80&w=800"
+                            alt="Jagannath Temple"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 left-4"><span
+                                class="px-3 py-1 rounded-full bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">Char
+                                Dham Site</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Jagannath Temple</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Dedicated to Lord
+                            Jagannath, a form of Sri Krishna. Puri is one of the four most sacred pilgrimage
+                            destinations in India.</p>
+                        <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase"><span
+                                class="material-symbols-outlined text-sm">stars</span>Sacred Icon</div>
+                    </div>
+                </div>
+
+                <!-- Chilika Lake -->
+                <div
+                    class="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-700">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1610448721566-47369c768e70?auto=format&fit=crop&q=80&w=800"
+                            alt="Chilika Lake"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 left-4"><span
+                                class="px-3 py-1 rounded-full bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">Nature
+                                Reserve</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Chilika Lake</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">The largest brackish
+                            water lagoon in India and second largest in the world. A haven for over 160 species of
+                            migratory birds.</p>
+                        <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase"><span
+                                class="material-symbols-outlined text-sm">eco</span>Biodiversity Hub</div>
+                    </div>
+                </div>
+
+                <!-- Dhauli Hill -->
+                <div
+                    class="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-700">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605330835492-9907f3006d64?auto=format&fit=crop&q=80&w=800"
+                            alt="Dhauli Hill"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 left-4"><span
+                                class="px-3 py-1 rounded-full bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">Peace
+                                Pagoda</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Dhauli Hill</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Site where the
+                            Kalinga War was fought. Home to the Shanti Stupa and Emperor Ashoka's historical rock
+                            edicts.</p>
+                        <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase"><span
+                                class="material-symbols-outlined text-sm">history_edu</span>Peace Monument</div>
+                    </div>
+                </div>
+
+                <!-- Similipal National Park -->
+                <div
+                    class="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-700">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&q=80&w=800"
+                            alt="Similipal"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 left-4"><span
+                                class="px-3 py-1 rounded-full bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">Tiger
+                                Reserve</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Similipal National Park</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">A national park and
+                            tiger reserve in Mayurbhanj. Home to Bengal tigers, Asian elephants, and diverse wildlife
+                            flora.</p>
+                        <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase"><span
+                                class="material-symbols-outlined text-sm">forest</span>Wild Heritage</div>
+                    </div>
+                </div>
+
+                <!-- Udayagiri & Khandagiri -->
+                <div
+                    class="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-700">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621259182370-dcc07963ec7a?auto=format&fit=crop&q=80&w=800"
+                            alt="Caves"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 left-4"><span
+                                class="px-3 py-1 rounded-full bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">Archaeological
+                                Site</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Udayagiri & Khandagiri</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Ancient caves on two
+                            adjacent hills, partly natural and partly artificial, of historical and religious
+                            importance.</p>
+                        <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase"><span
+                                class="material-symbols-outlined text-sm">castle</span>History Hub</div>
+                    </div>
+                </div>
+
+                <!-- Bhitarkanika -->
+                <div
+                    class="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-700">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550948332-902996d93333?auto=format&fit=crop&q=80&w=800"
+                            alt="Bhitarkanika"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 left-4"><span
+                                class="px-3 py-1 rounded-full bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">Crocodile
+                                Sanctuary</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Bhitarkanika Park</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Located in
+                            Kendrapara, famous for saltwater crocodiles, Indian pythons, and king cobras in a mangrove
+                            ecosystem.</p>
+                        <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase"><span
+                                class="material-symbols-outlined text-sm">water_drop</span>Eco Icon</div>
+                    </div>
+                </div>
+
+                <!-- Mukteswar Temple -->
+                <div
+                    class="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-700">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621259182370-dcc07963ec7a?auto=format&fit=crop&q=80&w=800"
+                            alt="Mukteswar"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 left-4"><span
+                                class="px-3 py-1 rounded-full bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">Gem
+                                of Architecture</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Mukteswar Temple</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Considered the "Gem
+                            of Odisha Architecture," this 10th-century temple is famous for its arched torana gateway.
+                        </p>
+                        <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase"><span
+                                class="material-symbols-outlined text-sm">diamond</span>Architectural Gem</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- More to Explore Row -->
+            <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-primary/5 border border-primary/10">
+                    <h5 class="font-bold text-primary mb-1">Puri Golden Beach</h5>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Blue-flag certified beach known for sand arts
+                        and serenity.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-primary/5 border border-primary/10">
+                    <h5 class="font-bold text-primary mb-1">Nandankanan Zoo</h5>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Premier zoo famous for its White Tiger Safari
+                        and Botanical Garden.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-primary/5 border border-primary/10">
+                    <h5 class="font-bold text-primary mb-1">Chandipur Beach</h5>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">The "Vanishing Sea" - unique for its receding
+                        tides and beauty.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-primary/5 border border-primary/10">
+                    <h5 class="font-bold text-primary mb-1">Barabati Stadium</h5>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">State-of-the-art sports complex with a truly
+                        rich sporting heritage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-light dark:bg-[#1a0f0a] pt-16 pb-8 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">functions</span>
+                        <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">ICCMESH <span
+                                class="text-primary">2026</span></span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 max-w-sm mb-8 leading-relaxed">
+                        Organized by the Department of Mathematics, Siksha 'O' Anusandhan (SOA) Deemed to be University,
+                        Bhubaneswar.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">public</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">share</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">mail</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold text-slate-900 dark:text-white mb-6 uppercase text-sm tracking-widest">
+                        Important Links</h5>
+                    <ul class="space-y-4 text-slate-500 dark:text-slate-400 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Call for Papers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Registration Fees</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Speaker List</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Accommodation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5
+                        class="font-bold text-slate-900 dark:text-white mb-6 uppercase text-sm tracking-widest text-primary">
+                        Contact Us
+                    </h5>
+                    <ul class="space-y-4 text-slate-500 dark:text-slate-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-xs text-primary mt-1">location_on</span>
+                            <span>Dept. of Electrical Engineering<br />
+                                Institute of Technical Education & Research (ITER),<br />
+                                Siksha 'O' Anusandhan (Deemed to be University) Jagamara, Khandagiri,<br />
+                                Bhubaneswar, Odisha, India-751030</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-xs text-primary">phone</span>
+                            <span>+91-9040263931, 9338388885</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-xs text-primary">mail</span>
+                            <span>odicon.ieee@gmail.com, manojdebnath@soa.ac.in</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-xs text-primary">public</span>
+                            <a href="https://odicon.co.in" target="_blank"
+                                class="hover:text-primary transition-colors">odicon.co.in</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 dark:text-slate-400 text-xs">
+                    Â© 2026 ICCMESH. All rights reserved. Siksha 'O' Anusandhan Deemed to be University.
+                </p>
+                <div class="flex gap-6 text-xs text-slate-500 dark:text-slate-400">
+                    <a class="hover:text-primary" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
