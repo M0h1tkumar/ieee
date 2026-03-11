@@ -1,6 +1,6 @@
-# ICCMESH 2024 - Conference Website
+# ICCMESH 2026 - Conference Website
 
-This repository contains the official landing page for the **International Conference on Computational Mathematics in Engineering and Soft Healthcare (ICCMESH 2024)**, organized by the Department of Mathematics at **Siksha 'O' Anusandhan (Deemed to be University)**, Bhubaneswar.
+This repository contains the official landing page for the **International Conference on Computational Mathematics in Engineering and Soft Healthcare (ICCMESH 2026)**, organized by the Department of Mathematics at **Siksha 'O' Anusandhan (Deemed to be University)**, Bhubaneswar.
 
 ## 🚀 Overview
 
@@ -38,4 +38,4 @@ Then open `http://localhost:3000/stitch_import/hero_code.html` in your browser.
 - **Location**: ITER, Bhubaneswar, Odisha, India.
 
 ---
-*Created for ICCMESH 2024.*
+*Created for ICCMESH 2026.*
