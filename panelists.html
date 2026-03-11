@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Panelists | ICCMESH 2026</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .speaker-card:hover .speaker-icon {
+            transform: scale(1.1);
+            background-color: #ec5b13;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-4xl">functions</span>
+                    <div class="flex flex-col">
+                        <span
+                            class="text-xl font-bold tracking-tight text-slate-900 dark:text-white leading-none">ICCMESH
+                            <span class="text-primary">2026</span></span>
+                        <span
+                            class="text-[10px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 mt-1 font-bold">IEEE
+                            Conference</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden xl:flex items-center gap-6">
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="index.html">Home</a>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-bold hover:text-primary transition-colors py-8">
+                            About <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block w-72 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl shadow-xl py-2 z-[100]">
+                            <a href="index.html#about"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">About
+                                Us</a>
+                            <a href="index.html#about-conference"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors border-t border-slate-50 dark:border-slate-700/50">About
+                                the Conference</a>
+                            <a href="index.html#dept-ee"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">About
+                                Dept. of Electrical Engineering</a>
+                        </div>
+                    </div>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="index.html#committee">Committee</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="index.html#tracks">Call for
+                        Papers</a>
+
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-bold hover:text-primary transition-colors py-8">
+                            Speakers <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block w-72 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl shadow-xl py-2 z-[100]">
+                            <a href="index.html#speakers"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors">Keynote
+                                Speakers</a>
+                            <a href="index.html#wie-speakers"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors border-t border-slate-50 dark:border-slate-700/50">WIE
+                                Speakers</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors bg-primary/5 text-primary">Panelists</a>
+                        </div>
+                    </div>
+
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="index.html#contact">Contact
+                        Us</a>
+
+                    <button
+                        class="bg-primary/50 cursor-not-allowed text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/10 ml-2">
+                        Registration Opening Soon
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title Section -->
+    <section class="py-20 bg-background-dark relative overflow-hidden text-center">
+        <div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full translate-y-1/2"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4">
+            <h1 class="text-white text-5xl md:text-6xl font-black mb-6">Expert <span
+                    class="text-primary">Panelists</span></h1>
+            <p class="text-slate-300 text-lg max-w-2xl mx-auto">Engaging discussions with leading minds in Mathematics,
+                Engineering, and Healthcare.</p>
+        </div>
+    </section>
+
+    <!-- Panelists Section -->
+    <section class="py-24 bg-background-light dark:bg-background-dark" id="panelists">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Panelists</h3>
+                <div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div
+                    class="speaker-card group bg-white dark:bg-slate-800 p-8 rounded-3xl border border-dashed border-slate-300 dark:border-slate-600 flex flex-col items-center justify-center text-center opacity-60 transition-all hover:opacity-100">
+                    <span class="material-symbols-outlined text-4xl text-slate-400 mb-4">group_add</span>
+                    <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WIE Panelists Section -->
+    <section class="py-24 bg-white dark:bg-slate-900/50" id="wie-panelists">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">WIE Panelists</h3>
+                <div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div
+                    class="speaker-card group bg-background-light dark:bg-slate-800 p-8 rounded-3xl border border-dashed border-slate-300 dark:border-slate-600 flex flex-col items-center justify-center text-center opacity-60 transition-all hover:opacity-100">
+                    <span class="material-symbols-outlined text-4xl text-slate-400 mb-4">person_add</span>
+                    <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">Expected Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-light dark:bg-[#1a0f0a] pt-16 pb-8 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-6 justify-center md:justify-start">
+                        <span class="material-symbols-outlined text-primary text-4xl">functions</span>
+                        <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">ICCMESH <span
+                                class="text-primary">2026</span></span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 max-w-sm mb-8 leading-relaxed mx-auto md:mx-0">
+                        Organized by the Department of Mathematics, Siksha 'O' Anusandhan (SOA) Deemed to be University,
+                        Bhubaneswar.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-slate-900 dark:text-white mb-6 uppercase text-sm tracking-widest">Quick
+                        Links</h5>
+                    <ul class="space-y-4 text-slate-500 dark:text-slate-400 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="index.html#tracks">Call for Papers</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="index.html#speakers">Keynote
+                                Speakers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5
+                        class="font-bold text-slate-900 dark:text-white mb-6 uppercase text-sm tracking-widest text-primary">
+                        Contact</h5>
+                    <ul class="space-y-4 text-slate-500 dark:text-slate-400 text-sm">
+                        <li class="flex items-center gap-2 justify-center md:justify-start">
+                            <span class="material-symbols-outlined text-xs text-primary">mail</span>
+                            <span>odicon.ieee@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-200 dark:border-slate-800 pt-8 text-center text-xs text-slate-500">
+                © 2026 ICCMESH. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
